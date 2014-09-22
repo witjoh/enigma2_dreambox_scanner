@@ -4,12 +4,12 @@ import Media, VideoFiles, Stack, Utils
 # this is a start to get to learn how to write scanners
 #
 
-debugfile='/tmp/enigma2_movie_debug.log'
+debugfile = '/tmp/enigma2_movie_debug.log'
 debug = True
 
 def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
     if debug:
-        logfile = open('/tmp/scanner.dbg', 'w')
+        logfile = open(debugfile, 'w')
         logfile.write("DEBUG_ENIGMA2 scanner called\n")
         logfile.write("Entering DREAMBOX DEBUG SCANNER\n")
         logfile.write("recvieved following parameters :\n")
