@@ -1,0 +1,70 @@
+DEBUG_ENIGMA2 scanner called
+Entering DREAMBOX DEBUG SCANNER
+recvieved following parameters :
+path parameter      : 
+files parameter     : ['/media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.eit', '/media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts', '/media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts.ap', '/media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts.cuts', '/media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts.meta', '/media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts.sc', '/media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.eit', '/media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts', '/media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts.ap', '/media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts.cuts', '/media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts.meta', '/media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts.sc', '/media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.eit', '/media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts', '/media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts.ap', '/media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts.cuts', '/media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts.meta', '/media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts.sc', '/media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.eit', '/media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts', '/media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts.ap', '/media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts.cuts', '/media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts.meta', '/media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts.sc', '/media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.eit', '/media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts', '/media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts.ap', '/media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts.cuts', '/media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts.meta', '/media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts.sc']
+mediaList parameter : []
+subdirs parameter   : ['/media/movie_mount1/test_enigma/testdir3', '/media/movie_mount1/test_enigma/testdir2']
+language parameter  : xn
+root parameter      : /media/movie_mount1/test_enigma
+kwargs parameter    : {}
+========================================================
+               START PRFOCESSING FILES SECTION            found ts.meta file : /media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts.meta
+Content of the /media/movie_mount1/test_enigma/20130915 2151 - Motorvision TV - NASCAR Live.ts.meta
+['1:0:1:A8:1:85:C00000:0:0:0:\n', 'NASCAR Live\n', "Brad Pitt leads a colourful cast in Guy Ritchie's second film, a sizzling East End thriller packed with villains, gypsies, diamonds and dogs. Cracking. (2000)(99 mins)\n", '1379274702\n', '\n', '530582400\n', '2817605632\n', 'f:0,c:0003ff,c:010401,c:020020,c:0303ff\n']
+substracted the programname NASCAR Live
+Third RegExp matches, year after info
+the year of the movie is 2000
+the genre of the movie is 
+the info of the movie is Brad Pitt leads a colourful cast in Guy Ritchie's second film, a sizzling East End thriller packed with villains, gypsies, diamonds and dogs. Cracking.
+========================================
+NASCAR Live (2000)
+========================================
+found ts.meta file : /media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts.meta
+Content of the /media/movie_mount1/test_enigma/20140731 2200 - REBEL - Koncert_ Sepultura.ts.meta
+['1:0:1:13D1:C8A:3:EB0000:0:0:0:\n', 'Koncert: Sepultura\n', '\n', '1406836800\n', '\n', '0\n', '0\n', 'f:0,c:000fad,c:010fb7,c:030fad\n']
+substracted the programname Koncert: Sepultura
+empty line
+the year of the movie is 
+the genre of the movie is 
+the info of the movie is 
+========================================
+Koncert: Sepultura ()
+========================================
+found ts.meta file : /media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts.meta
+Content of the /media/movie_mount1/test_enigma/20140912 1430 - HBO HD - Batman_ The Dark Knight Returns - part 1.ts.meta
+['1:0:19:523A:C99:3:EB0000:0:0:0:\n', 'Batman: The Dark Knight Returns - part 1\n', 'Animatiefilm.2011. \n', '1410525000\n', '\n', '404654400\n', '2581585920\n', 'f:0,c:000209,c:030209,c:040079,c:050001\n']
+substracted the programname Batman: The Dark Knight Returns - part 1
+Second RegExp matches, second field is the year
+the year of the movie is 2011
+the genre of the movie is Animatiefilm
+the info of the movie is  
+
+========================================
+Batman: The Dark Knight Returns - part 1 (2011)
+========================================
+found ts.meta file : /media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts.meta
+Content of the /media/movie_mount1/test_enigma/20140912 2345 - HBO HD - Battlestar Galactica_ Blood & Chrome.ts.meta
+['1:0:19:523A:C99:3:EB0000:0:0:0:\n', 'Battlestar Galactica: Blood & Chrome\n', 'SF-film.\n', '1410558300\n', '\n', '0\n', '0\n', 'f:40,c:000209,c:030209\n']
+substracted the programname Battlestar Galactica: Blood & Chrome
+line not empty, but no match found
+the year of the movie is 
+the genre of the movie is 
+the info of the movie is SF-film.
+
+========================================
+Battlestar Galactica: Blood & Chrome ()
+========================================
+found ts.meta file : /media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts.meta
+Content of the /media/movie_mount1/test_enigma/20140915 0240 - HBO 3 - Sniper_ reloaded.ts.meta
+['1:0:16:17B4:C82:3:EB0000:0:0:0:\n', 'Sniper: reloaded\n', 'Actiethriller.2011. \n', '1410741600\n', '\n', '0\n', '0\n', 'f:0,c:000212,c:030212,c:050001,c:100001,c:11006b\n']
+substracted the programname Sniper: reloaded
+Second RegExp matches, second field is the year
+the year of the movie is 2011
+the genre of the movie is Actiethriller
+the info of the movie is  
+
+========================================
+Sniper: reloaded (2011)
+========================================
+
