@@ -29,4 +29,20 @@ Whenever I select local data, and because my database contains the original ts f
 it will select those as movie title, making everything messed up.4
 Database cleanup  is something I'm looking at.
 
+Some observations
+=================
+
+* after upgrading PMS, force refresh only calls the scanner if something is really changed.
+* To test the scanner, i had to delete the library and add it again.
+* Since upgrade, the --analyze process is eating up all CPU, resulting into an unresponsive web client.
+* Got loads as high as 50, running 50 analyze processes, but after couple of hours, system still works
+
+Things I need more info on
+==========================
+
+* reduce analyze process load
+  * touch jpg file ?
+  * set global --nothumb flag ?
+  * move the analyze process in batch to a very p[erformant server (which could be shut down when not used)
+* writing an agent using the *.eit
 

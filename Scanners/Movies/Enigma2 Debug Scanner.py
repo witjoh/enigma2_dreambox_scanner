@@ -1,5 +1,7 @@
 import re, os, os.path
 import Media, VideoFiles, Stack, Utils
+
+import time
 #
 # this is a start to get to learn how to write scanners
 #
@@ -7,22 +9,22 @@ import Media, VideoFiles, Stack, Utils
 debugfile = '/tmp/enigma2_movie_debug.log'
 debug = True
 
-def strip_name_from_ts_file(tsfile):
-    "Retrievess the programma name from a dreambox enigma2 file
-     This has the form of YYYYMMDD HHMM - Channel - Programmename.ts
-     code is borrowed from Enigma2 Movies.py  by Quinten
-     https://forums.plex.tv/index.php/topic/68991-scanner-for-enigma2-ts-file
-     Also transforms the  '_ ' to ': ' "
-     base_name = os.path.splitext(os.path.basename(tsfile))[0]
-     tmp_name = base_name.split(' - ' ,2)[2].strip()
-     return re.sub(r'_ ',': ', tmp_name)
-
-
 def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
+    def strip_name_from_ts_file(tsfile):
+         #Retrievess the programma name from a dreambox enigma2 file
+         #This has the form of YYYYMMDD HHMM - Channel - Programmename.ts
+         #code is borrowed from Enigma2 Movies.py  by Quinten
+         #https://forums.plex.tv/index.php/topic/68991-scanner-for-enigma2-ts-file
+         #Also transforms the  '_ ' to ': ' "
+         base_name = os.path.splitext(os.path.basename(tsfile))[0]
+         tmp_name = base_name.split(' - ' ,2)[2].strip()
+         return re.sub(r'_ ',': ', tmp_name)
+
     if debug:
-        logfile = open(debugfile, 'w')
-        logfile.write("DEBUG_ENIGMA2 scanner called\n")
-        logfile.write("Entering DREAMBOX DEBUG SCANNER\n")
+        logfile = open(debugfile, 'a')
+        logfile.write(" ========================================================================\n")
+        logfile.write(time.strftime("%c"))
+        logfile.write(" --- Entering DREAMBOX DEBUG SCANNER\n")
         logfile.write("recvieved following parameters :\n")
         logfile.write("path parameter      : ")
         logfile.write(str(path))
@@ -75,9 +77,9 @@ def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
 
                 if name:
                     # programma name is empty in the ts.meta file, so we take it from the filename
-                    name = strip_name_from_ts_file(tsfile = scan_file)
+                    name = strip_name_from_ts_file(tsfile=scan_file)
                     if debug:
-                        logfiel.write(str("no title in ts.meta file found, abstracted form filename : " + (name) + "\n"))
+                        logfile.write(str("no title in ts.meta file found, abstracted form filename : " + (name) + "\n"))
                 else:
                     if debug:
                         logfile.write(str("substracted the programname " + (name) + "\n"))
@@ -151,7 +153,7 @@ def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
                     genre = ''
                     short_info = ''
             else:
-                name = strip_name_from_ts_file(tsfile = scan_file)
+                name = strip_name_from_ts_file(tsfile=scan_file)
                 year = ''
 
             if debug:
@@ -172,4 +174,5 @@ def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
             mediaList.append(movie)
 
     if debug:
+        logfile.write(" ========================================================================\n")
         logfile.close()
