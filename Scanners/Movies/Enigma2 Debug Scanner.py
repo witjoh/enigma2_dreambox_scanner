@@ -10,6 +10,7 @@ debugfile = '/tmp/enigma2_movie_debug.log'
 debug = True
 
 def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
+
     def strip_name_from_ts_file(tsfile):
          #Retrievess the programma name from a dreambox enigma2 file
          #This has the form of YYYYMMDD HHMM - Channel - Programmename.ts
@@ -22,7 +23,7 @@ def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
 
     if debug:
         logfile = open(debugfile, 'a')
-        logfile.write(" ========================================================================\n")
+        logfile.write("=======================================================\n")
         logfile.write(time.strftime("%c"))
         logfile.write(" --- Entering DREAMBOX DEBUG SCANNER\n")
         logfile.write("recvieved following parameters :\n")
@@ -48,7 +49,7 @@ def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
         logfile.write(str(kwargs))
         logfile.write('\n')
         logfile.write("========================================================\n")
-        logfile.write("               START PRFOCESSING FILES SECTION            ")
+        logfile.write("               START PRFOCESSING FILES SECTION          \n ")
 
     year = ''
     genre = ''
@@ -76,13 +77,13 @@ def Scan(path, files, mediaList, subdirs, language=None, root=None, **kwargs):
                 name = lines[1].strip()
 
                 if name:
+                    if debug:
+                        logfile.write(str("substracted the programname " + (name) + "\n"))
+                else:
                     # programma name is empty in the ts.meta file, so we take it from the filename
                     name = strip_name_from_ts_file(tsfile=scan_file)
                     if debug:
                         logfile.write(str("no title in ts.meta file found, abstracted form filename : " + (name) + "\n"))
-                else:
-                    if debug:
-                        logfile.write(str("substracted the programname " + (name) + "\n"))
 
                 # line 3 in the meta file contains multiple formats.  In this directory we
                 # assume onlu movies are to be processed
