@@ -5,13 +5,28 @@ A plex movie scanner using the ts.meta info for sreambox recorded satellite movi
 
 This is a first attemp, with much to many debugging, to get a better insight how movie scanners interact wit the Plex Media Server.
 
-Right now it retrieves the programm name and the year the movie was released from the *.ts.meta file, if one is provided.
-This info is then added to the mediaList array, which is then passed to back to the Plex Media Scanner, doing its magic.
+Code seems to be running with PMS 0.9.10.x version.
 
-But in my test section, the provifed name and year seems not to be respected, and the filename is still the base for agents looking up the meta data.
+Currently it has following features
 
-Still looking for the right info to get this right.
+* uses the ts.meta file to retrieve the prgramname and movie release year.
+* If no ts.meta file is found, it will extract the programname from the ts file name.
+* It only supports the dreambox enigma2 file format.
+* Only Movies are supported yes.
 
-I would love to get this work woth the standard agents looking up the metadata from the internet (The MOvie Database and/or the freebase)
+TODO
+====
 
-Consider this code as very experimental and written by an absolute python beginner. So any tips, corrections etc are welcome.
+* Skip series if found in the Movie Section
+* Write something simulalar fot the series (in progress)
+* Add support for more possible ts.meta formats, if enough examples can be found
+
+Configuration
+=============
+
+As agent, I selected the moviedb/freebase.
+Whenever I select local data, and because my database contains the original ts filenames (with the date/channel stuff)
+it will select those as movie title, making everything messed up.4
+Database cleanup  is something I'm looking at.
+
+
