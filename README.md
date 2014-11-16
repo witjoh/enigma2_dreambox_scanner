@@ -12,7 +12,7 @@ Currently it has following features
 * uses the ts.meta file to retrieve the prgramname and movie release year.
 * If no ts.meta file is found, it will extract the programname from the ts file name.
 * It only supports the dreambox enigma2 file format.
-* Only Movies are supported yes.
+* Only Movies are supported.
 
 TODO
 ====
@@ -41,7 +41,7 @@ Things I need more info on
 ==========================
 
 * reduce analyze process load
-  * touch jpg file ?
+  * touch jpg file ? => this seems to work, will add this to the code.
   * set global --nothumb flag ?
   * move the analyze process in batch to a very p[erformant server (which could be shut down when not used)
 * writing an agent using the \*.eit
