@@ -1,7 +1,7 @@
 enigma2_dreambox_scanner
 ========================
 
-A plex movie scanner using the ts.meta info for sreambox recorded satellite movies
+A plex movie scanner using the ts.meta info for dreambox recorded satellite movies
 
 This is a first attemp, with much to many debugging, to get a better insight how movie scanners interact wit the Plex Media Server.
 
@@ -44,5 +44,13 @@ Things I need more info on
   * touch jpg file ?
   * set global --nothumb flag ?
   * move the analyze process in batch to a very p[erformant server (which could be shut down when not used)
-* writing an agent using the *.eit
+* writing an agent using the \*.eit
+
+The .eit file of dreambox recordings
+====================================
+
+Delving in the code, it seems to me the dreambox eit files are just a part of
+the Event Information Table description (ETSI EN 300 468).
+It contains the data as described in  table 7 :  Event Information Section, especially the part in the first for loop, starting with the event_id field.
+
 
